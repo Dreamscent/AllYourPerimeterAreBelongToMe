@@ -2,8 +2,8 @@
 
 from boofuzz import *
 
-host = '192.168.145.128'  # windows VM
-port = 9999  # vulnserver port
+host = '192.168.145.128'  # Target IP
+port = 9999  # Target Port
 proto = 'tcp'
 
 def main():
