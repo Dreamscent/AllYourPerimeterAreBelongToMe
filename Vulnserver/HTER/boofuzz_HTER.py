@@ -2,7 +2,7 @@
 
 from boofuzz import *
 
-host = '192.168.145.128'  # windows VM
+host = '192.168.145.129'  # windows VM
 port = 9999  # vulnserver port
 proto = 'tcp'
 
