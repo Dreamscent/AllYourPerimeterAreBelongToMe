@@ -1,2 +1,2 @@
 # AllYourPerimeterAreBelongToMe
- Offensive Security "Capture The Perimeter" course shenanigans
+My Offensive Security "Capture The Perimeter" course shenanigans
