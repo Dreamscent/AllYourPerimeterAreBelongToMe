@@ -7,7 +7,7 @@ port = 9999  # Target Port
 proto = 'tcp'
 s = remote(host, port)
 
-string = "HTER " # this causes the application crash
+string = "HTER "
 buffer = "C" * 1000
 increment = buffer
 
