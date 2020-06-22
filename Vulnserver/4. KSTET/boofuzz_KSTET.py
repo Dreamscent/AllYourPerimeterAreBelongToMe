@@ -20,7 +20,7 @@ def main():
     s_delim(" ", fuzzable=False)
 
     # This value is arbitrary as we did not specify 'False' for fuzzable. Boofuzz will fuzz this string now
-    s_string("KSTET")
+    s_string("FUZZ")
 
     # having our 'session' variable connect following the guidelines we established in "TRUN"
     session.connect(s_get("KSTET"))

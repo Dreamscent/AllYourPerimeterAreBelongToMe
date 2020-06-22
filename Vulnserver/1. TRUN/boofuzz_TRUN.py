@@ -11,10 +11,10 @@ def main():
     session = Session(target=Target(
         connection=SocketConnection(host, port, proto=proto)))
 
-    s_initialize("HTER")  # just giving our session a name, "HTER"
+    s_initialize("TRUN")  # just giving our session a name, "HTER"
 
     # these strings are fuzzable by default, so here instead of blank, we specify 'false'
-    s_string("HTER", fuzzable=False)
+    s_string("TRUN", fuzzable=False)
 
     # we don't want to fuzz the space between "TRUN" and our arg
     s_delim(" ", fuzzable=False)
@@ -23,7 +23,7 @@ def main():
     s_string("FUZZ")
 
     # having our 'session' variable connect following the guidelines we established in "TRUN"
-    session.connect(s_get("HTER"))
+    session.connect(s_get("TRUN"))
     session.fuzz()  # calling this function actually performs the fuzzing
 
 
