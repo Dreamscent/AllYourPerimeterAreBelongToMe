@@ -17,3 +17,6 @@ https://github.com/h0mbre/Offset
 
 muts_encoder:
 https://github.com/sagishahar/scripts/blob/master/muts_encoder.py
+
+solve.py
+:( forgot who wrote it
