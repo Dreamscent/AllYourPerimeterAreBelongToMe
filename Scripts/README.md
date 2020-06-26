@@ -6,7 +6,7 @@ Scripts which can help in exploit dev
 Slink:
 https://github.com/ihack4falafel/Slink
 
-Z3ncoder:
+Z3ncoder (solve.py):
 ~~~bash
 python3 -m pip install z3-solve
 ~~~
@@ -17,6 +17,3 @@ https://github.com/h0mbre/Offset
 
 muts_encoder:
 https://github.com/sagishahar/scripts/blob/master/muts_encoder.py
-
-solve.py
-:( forgot who wrote it
